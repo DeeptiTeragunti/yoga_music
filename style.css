@@ -1,0 +1,209 @@
+html {
+  min-height: 100%;
+  display: flex;
+}
+body {
+  background-image: url("https://i.hurimg.com/i/hdn/75/0x0/5b2b42e95379ff0954f5fc7c.jpg");
+  display: flex;
+}
+
+.player {
+  /* height: -20vh;
+  place-items: center;
+  display: flex;
+  align-items: center;
+  flex-direction: center;
+
+  justify-content: space-between;*/
+  position: relative;
+  margin: auto;
+  width: 300px;
+  height: 500px;
+
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px rgba(dark, 0.4);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.details {
+  /*display: flex;
+  align-items: center;
+  flex-direction: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+
+  margin: auto;
+  /*margin-top: 79rem;
+  */
+  height: 115px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: rgba(white, 0.85);
+  transform: translateY(35px);
+  transition: all 0.5s ease-in-out;
+}
+
+.track-art {
+  display: flex;
+  align-items: center;
+
+  margin: 20px;
+  height: 0px;
+  width: 250px;
+
+  justify-content: center;
+  background-size: cover;
+  border-radius: 7%;
+}
+
+.now-playing {
+  font-size: 1rem;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: -3px;
+}
+
+.track-name {
+  font-size: 2rem;
+  margin-inline-end: initial;
+}
+
+.track-artist {
+  font-size: 1.5rem;
+
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+
+  margin: 315px;
+  height: 900px;
+  width: 250px;
+  flex-direction: center;
+  justify-content: center;
+  background-size: cover;
+  border-radius: 7%;
+  justify-content: space-between;
+}
+
+.playpause-track,
+.prev-track,
+.next-track {
+  padding: 15px;
+  opacity: 0.8;
+  margin: 15px 25px;
+  align-items: right;
+  justify-content: right;
+
+  /* Smoothly transition the opacity */
+  transition: opacity 0.2s;
+}
+
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover {
+  opacity: 1;
+}
+.slider_container {
+  margin: 95px;
+  margin-bottom: 90px;
+  width: 490px;
+  position: absolute;
+}
+.volume_slider_container {
+  display: flex;
+  align-items: center;
+  margin: 315px;
+  position: relative;
+  width: 150px;
+  flex-direction: right;
+}
+
+.playpause-track,
+.prev-track,
+.next-track {
+  padding: 15px;
+  opacity: 0.8;
+  margin: 15px 25px;
+  align-items: right;
+  justify-content: right;
+
+  /* Smoothly transition the opacity */
+  transition: opacity 0.2s;
+}
+
+/* Modify the appearance of the slider */
+.seek_slider {
+  height: 5px;
+  width: 19%;
+
+  background: lighten(dark, 5%);
+  border-radius: 10px;
+
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+.volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+
+  background: black;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  max-width: 100%;
+}
+
+/* Modify the appearance of the slider thumb */
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: rgb(182, 192, 94);
+  cursor: pointer;
+  border-radius: 110%;
+}
+
+.seek_slider:hover,
+.volume_slider:hover {
+  opacity: 1;
+}
+
+.seek_slider {
+  width: 200%;
+}
+
+.volume_slider {
+  width: 200%;
+}
+
+.current-time,
+.total-duration {
+  padding: 10px;
+}
+
+i.fa-volume-down,
+i.fa-volume-up {
+  padding: 10px;
+}
+
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward {
+  cursor: pointer;
+}
