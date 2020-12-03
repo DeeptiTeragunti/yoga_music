@@ -40,7 +40,7 @@ let track_list = [
   {
     name: "Shipping Lanes",
     artist: "Chad Crouch",
-    writer:"demi",
+    writer:"",
 
     //image: "https://images.pexels.com/photos/1717969/pexels-photo-1717969.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
     path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Shipping_Lanes.mp3",
@@ -73,6 +73,7 @@ function loadTrack(track_index) {
   track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
+  track_writer.textContent = track_list[track_index].writer;
   now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
 
   updateTimer = setInterval(seekUpdate, 1000);
@@ -81,8 +82,8 @@ function loadTrack(track_index) {
 }
 
 function resetValues() {
-  curr_time.textContent = "00:00";
-  total_duration.textContent = "00:00";
+  curr_time.textContent = "";
+  total_duration.textContent = "";
   seek_slider.value = 0;
 }
 
@@ -107,6 +108,7 @@ function pauseTrack() {
 }
 
 function nextTrack() {
+  
   if (track_index < track_list.length - 1)
     track_index += 1;
   else track_index = 0;

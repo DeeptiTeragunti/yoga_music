@@ -1,27 +1,60 @@
 html {
   min-height: 100%;
   display: flex;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 body {
-  background-image: url("https://i.hurimg.com/i/hdn/75/0x0/5b2b42e95379ff0954f5fc7c.jpg");
+  /* background-image: url("https://i.hurimg.com/i/hdn/75/0x0/5b2b42e95379ff0954f5fc7c.jpg");
+
+  transition: transform 0.2s;*/
   display: flex;
+  height: 100%;
+  display: flex;
+}
+/*.zoom {
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s;
+
+  background-repeat: no-repeat;
+
+  background-repeat: no-repeat;
+
+  width: 100%;
+}
+.zoom:hover {
+  transform: scale(
+    1.5
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+#bg:hover {
+  transform: scale(1.5);
+}
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.8s ease;
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .player {
-  /* height: -20vh;
-  place-items: center;
+  height: 20vh;
+  place-items: left;
   display: flex;
   align-items: center;
   flex-direction: center;
 
-  justify-content: space-between;*/
   position: relative;
-  margin: auto;
+
   width: 300px;
   height: 500px;
 
-  border-radius: 5px;
-  box-shadow: 5px 5px 15px rgba(dark, 0.4);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -41,7 +74,7 @@ body {
   margin: auto;
   /*margin-top: 79rem;
   */
-  height: 115px;
+  height: 5px;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -54,11 +87,11 @@ body {
   display: flex;
   align-items: center;
 
-  margin: 20px;
-  height: 0px;
+  margin: 90px;
+
   width: 250px;
 
-  justify-content: center;
+  justify-content: left;
   background-size: cover;
   border-radius: 7%;
 }
@@ -67,12 +100,14 @@ body {
   font-size: 1rem;
   justify-content: space-between;
   text-align: center;
-  margin-top: -3px;
 }
 
 .track-name {
   font-size: 2rem;
   margin-inline-end: initial;
+}
+.track-writer {
+  font-size: 1rem;
 }
 
 .track-artist {
@@ -85,19 +120,21 @@ body {
   display: flex;
   align-items: center;
 
-  margin: 315px;
-  height: 900px;
-  width: 250px;
+  margin: 325px;
+  height: 5px;
+  width: 120px;
   flex-direction: center;
-  justify-content: center;
+  justify-content: left;
   background-size: cover;
   border-radius: 7%;
   justify-content: space-between;
+  margin-top: 69rem;
 }
 
 .playpause-track,
 .prev-track,
-.next-track {
+.next-track,
+.shuffle {
   padding: 15px;
   opacity: 0.8;
   margin: 15px 25px;
@@ -110,27 +147,30 @@ body {
 
 .playpause-track:hover,
 .prev-track:hover,
-.next-track:hover {
+.next-track:hover,
+.shuffle:hover {
   opacity: 1;
 }
 .slider_container {
   margin: 95px;
-  margin-bottom: 90px;
+  margin-top: 46rem;
   width: 490px;
   position: absolute;
 }
 .volume_slider_container {
   display: flex;
   align-items: center;
-  margin: 315px;
+  margin: 42px;
   position: relative;
-  width: 150px;
+  width: 450px;
   flex-direction: right;
+  margin-top: 51rem;
 }
 
 .playpause-track,
 .prev-track,
-.next-track {
+.next-track,
+.shuffle {
   padding: 15px;
   opacity: 0.8;
   margin: 15px 25px;
@@ -156,8 +196,8 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 5px;
-
+  height: 50px;
+  width: 100px;
   background: black;
   opacity: 0.7;
   -webkit-transition: 0.2s;
@@ -188,7 +228,7 @@ body {
 }
 
 .volume_slider {
-  width: 200%;
+  width: 400%;
 }
 
 .current-time,
@@ -204,6 +244,7 @@ i.fa-volume-up {
 i.fa-play-circle,
 i.fa-pause-circle,
 i.fa-step-forward,
-i.fa-step-backward {
+i.fa-step-backward,
+i.fas fa-random {
   cursor: pointer;
 }
